@@ -1,0 +1,44 @@
+.bDIuBa_grid-body {
+  flex-flow: wrap;
+  gap: 20px;
+  width: 100vw;
+  margin: 0 auto 0 15px;
+  padding: 20px 0;
+  display: flex;
+  position: relative;
+  top: -365px;
+}
+
+.bDIuBa_card {
+  z-index: 3;
+  background-color: #fff;
+  min-width: 290px;
+  max-width: 345px;
+  height: 420px;
+  min-height: 420px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  & > h3 {
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
+}
+
+.bDIuBa_each-card {
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  display: flex;
+
+  & img {
+    width: 140px;
+    height: 130px;
+  }
+
+  & p {
+    font-size: .86rem;
+  }
+}
+/*# sourceMappingURL=index.c41b5a0e.css.map */

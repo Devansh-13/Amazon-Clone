@@ -34883,21 +34883,573 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _navbar = require("../../common/navbar/navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+var _react = require("react");
+var _s = $RefreshSig$();
+const data = [
+    {
+        id: 1,
+        name: "Apple"
+    },
+    {
+        id: 2,
+        name: "Banana"
+    },
+    {
+        id: 3,
+        name: "Orange"
+    },
+    {
+        id: 4,
+        name: "Grapes"
+    }
+];
 const Products = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "products page"
-    }, void 0, false, {
-        fileName: "src/pages/productpage/products.js",
-        lineNumber: 4,
-        columnNumber: 9
-    }, undefined);
+    _s();
+    const [searchText, setSearchText] = (0, _react.useState)("ABc");
+    const [products, setProducts] = (0, _react.useState)(data);
+    const filteredProducts = products.filter((product)=>product.name.toLowerCase().startsWith(searchText.toLowerCase()));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {
+                searchText: searchText,
+                setSearchText: setSearchText
+            }, void 0, false, {
+                fileName: "src/pages/productpage/products.js",
+                lineNumber: 21,
+                columnNumber: 9
+            }, undefined),
+            searchText === "" ? products.map((product)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: product.name
+                }, product.id, false, {
+                    fileName: "src/pages/productpage/products.js",
+                    lineNumber: 25,
+                    columnNumber: 21
+                }, undefined);
+            }) : filteredProducts.map((product)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: product.name
+                }, product.id, false, {
+                    fileName: "src/pages/productpage/products.js",
+                    lineNumber: 30,
+                    columnNumber: 21
+                }, undefined);
+            })
+        ]
+    }, void 0, true);
 };
+_s(Products, "7PwHw1UzyNBrlssMJTo14avRcak=");
 _c = Products;
 exports.default = Products;
 var _c;
 $RefreshReg$(_c, "Products");
 
   $parcel$ReactRefreshHelpers$c478.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../common/navbar/navbar":"jlczQ","react":"21dqq"}],"jlczQ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$485e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$485e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _navLogo = require("../navcomponents/nav-logo/navLogo");
+var _navLogoDefault = parcelHelpers.interopDefault(_navLogo);
+var _react = require("react");
+var _navAddress = require("../navcomponents/nav-address/navAddress");
+var _navAddressDefault = parcelHelpers.interopDefault(_navAddress);
+var _navSearch = require("../navcomponents/nav-search/navSearch");
+var _navSearchDefault = parcelHelpers.interopDefault(_navSearch);
+var _navLanguage = require("../navcomponents/nav-language/navLanguage");
+var _navLanguageDefault = parcelHelpers.interopDefault(_navLanguage);
+var _navUser = require("../navcomponents/nav-user/navUser");
+var _navUserDefault = parcelHelpers.interopDefault(_navUser);
+var _navOrder = require("../navcomponents/nav-order/navOrder");
+var _navOrderDefault = parcelHelpers.interopDefault(_navOrder);
+var _navCart = require("../navcomponents/nav-cart/navCart");
+var _navCartDefault = parcelHelpers.interopDefault(_navCart);
+const NavBar = (props)=>{
+    console.log(props);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "navbar",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navLogoDefault.default), {}, void 0, false, {
+                fileName: "src/common/navbar/navbar.js",
+                lineNumber: 17,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navAddressDefault.default), {}, void 0, false, {
+                fileName: "src/common/navbar/navbar.js",
+                lineNumber: 19,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navSearchDefault.default), {
+                searchText: props.searchText,
+                setSearchText: props.setSearchText
+            }, void 0, false, {
+                fileName: "src/common/navbar/navbar.js",
+                lineNumber: 22,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navLanguageDefault.default), {}, void 0, false, {
+                fileName: "src/common/navbar/navbar.js",
+                lineNumber: 24,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navUserDefault.default), {}, void 0, false, {
+                fileName: "src/common/navbar/navbar.js",
+                lineNumber: 26,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navOrderDefault.default), {}, void 0, false, {
+                fileName: "src/common/navbar/navbar.js",
+                lineNumber: 28,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navCartDefault.default), {}, void 0, false, {
+                fileName: "src/common/navbar/navbar.js",
+                lineNumber: 30,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navbar/navbar.js",
+        lineNumber: 15,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavBar;
+exports.default = NavBar;
+var _c;
+$RefreshReg$(_c, "NavBar");
+
+  $parcel$ReactRefreshHelpers$485e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../navcomponents/nav-logo/navLogo":"6NXhx","../navcomponents/nav-address/navAddress":"l6XMO","../navcomponents/nav-search/navSearch":"j6RGn","../navcomponents/nav-language/navLanguage":"dLBr8","../navcomponents/nav-user/navUser":"5cAo6","../navcomponents/nav-order/navOrder":"3pCIQ","../navcomponents/nav-cart/navCart":"k7ShU"}],"6NXhx":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$295a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$295a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _logo = require("../../logo/logo");
+var _logoDefault = parcelHelpers.interopDefault(_logo);
+const NavLogo = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nav-logo border",
+        children: [
+            (0, _logoDefault.default),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "text-in",
+                children: ".in"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-logo/navLogo.js",
+                lineNumber: 8,
+                columnNumber: 17
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navcomponents/nav-logo/navLogo.js",
+        lineNumber: 6,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavLogo;
+exports.default = NavLogo;
+var _c;
+$RefreshReg$(_c, "NavLogo");
+
+  $parcel$ReactRefreshHelpers$295a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../../logo/logo":"9zLAp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9zLAp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c88a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c88a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const AmazonLogo = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    className: "logo"
+}, void 0, false, {
+    fileName: "src/common/logo/logo.js",
+    lineNumber: 2,
+    columnNumber: 20
+}, undefined);
+exports.default = AmazonLogo;
+
+  $parcel$ReactRefreshHelpers$c88a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l6XMO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1626 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1626.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const NavAddress = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nav-address border",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "add-first",
+                children: "Delivering to Delhi 110008"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-address/navAddress.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "add-icon-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "add-icon"
+                    }, void 0, false, {
+                        fileName: "src/common/navcomponents/nav-address/navAddress.js",
+                        lineNumber: 8,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "add-second",
+                        children: "Update location"
+                    }, void 0, false, {
+                        fileName: "src/common/navcomponents/nav-address/navAddress.js",
+                        lineNumber: 9,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/common/navcomponents/nav-address/navAddress.js",
+                lineNumber: 7,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navcomponents/nav-address/navAddress.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavAddress;
+exports.default = NavAddress;
+var _c;
+$RefreshReg$(_c, "NavAddress");
+
+  $parcel$ReactRefreshHelpers$1626.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j6RGn":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c2d0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c2d0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const NavSearch = (props)=>{
+    console.log(props);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nav-search",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                className: "search-select",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                    children: "All"
+                }, void 0, false, {
+                    fileName: "src/common/navcomponents/nav-search/navSearch.js",
+                    lineNumber: 14,
+                    columnNumber: 13
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-search/navSearch.js",
+                lineNumber: 13,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                className: "search-input",
+                type: "text",
+                placeholder: "Search Amazon.in",
+                value: props.searchText,
+                onChange: (e)=>props.setSearchText(e.target.value)
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-search/navSearch.js",
+                lineNumber: 16,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-icon"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-search/navSearch.js",
+                lineNumber: 17,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navcomponents/nav-search/navSearch.js",
+        lineNumber: 12,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavSearch;
+exports.default = NavSearch;
+var _c;
+$RefreshReg$(_c, "NavSearch");
+
+  $parcel$ReactRefreshHelpers$c2d0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dLBr8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0106 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0106.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const NavLanguage = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nav-language border",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flag-icon"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-language/navLanguage.js",
+                lineNumber: 4,
+                columnNumber: 17
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "flag-name",
+                children: "EN"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-language/navLanguage.js",
+                lineNumber: 5,
+                columnNumber: 17
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "arrow-icon"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-language/navLanguage.js",
+                lineNumber: 6,
+                columnNumber: 17
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navcomponents/nav-language/navLanguage.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavLanguage;
+exports.default = NavLanguage;
+var _c;
+$RefreshReg$(_c, "NavLanguage");
+
+  $parcel$ReactRefreshHelpers$0106.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5cAo6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3dca = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3dca.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+const NavUser = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nav-user border",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "user-info",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/signup",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "user-line1",
+                            children: "Hello, sign in"
+                        }, void 0, false, {
+                            fileName: "src/common/navcomponents/nav-user/navUser.js",
+                            lineNumber: 8,
+                            columnNumber: 21
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/common/navcomponents/nav-user/navUser.js",
+                        lineNumber: 7,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "user-line2",
+                        children: "Account & lists"
+                    }, void 0, false, {
+                        fileName: "src/common/navcomponents/nav-user/navUser.js",
+                        lineNumber: 10,
+                        columnNumber: 21
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/common/navcomponents/nav-user/navUser.js",
+                lineNumber: 6,
+                columnNumber: 17
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "arrow-icon-2"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-user/navUser.js",
+                lineNumber: 12,
+                columnNumber: 17
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navcomponents/nav-user/navUser.js",
+        lineNumber: 5,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavUser;
+exports.default = NavUser;
+var _c;
+$RefreshReg$(_c, "NavUser");
+
+  $parcel$ReactRefreshHelpers$3dca.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"3pCIQ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$87dd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$87dd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const NavOrder = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nav-orders border",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "order-1",
+                children: "Returns"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-order/navOrder.js",
+                lineNumber: 4,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "order-2",
+                children: "& Orders"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-order/navOrder.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navcomponents/nav-order/navOrder.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavOrder;
+exports.default = NavOrder;
+var _c;
+$RefreshReg$(_c, "NavOrder");
+
+  $parcel$ReactRefreshHelpers$87dd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"k7ShU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d0b1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d0b1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const NavCart = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nav-cart border",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "cart-count",
+                children: "0"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-cart/navCart.js",
+                lineNumber: 4,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "cart-icon"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-cart/navCart.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "cart-line",
+                children: "Cart"
+            }, void 0, false, {
+                fileName: "src/common/navcomponents/nav-cart/navCart.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/common/navcomponents/nav-cart/navCart.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = NavCart;
+exports.default = NavCart;
+var _c;
+$RefreshReg$(_c, "NavCart");
+
+  $parcel$ReactRefreshHelpers$d0b1.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -34956,308 +35508,6 @@ var _c;
 $RefreshReg$(_c, "SignUp");
 
   $parcel$ReactRefreshHelpers$d447.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jlczQ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$485e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$485e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _logoJs = require("../logo/logo.js");
-var _logoJsDefault = parcelHelpers.interopDefault(_logoJs);
-var _reactRouterDom = require("react-router-dom");
-var _react = require("react");
-var _s = $RefreshSig$();
-const NavBar = ()=>{
-    _s();
-    const [inputText, setInputText] = (0, _react.useState)("");
-    const handleChange = (e)=>{
-        setInputText(e.target.value);
-        console.log(inputText);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "navbar",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-logo border",
-                children: [
-                    (0, _logoJsDefault.default),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "text-in",
-                        children: ".in"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 19,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/common/navbar/navbar.js",
-                lineNumber: 17,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-address border",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "add-first",
-                        children: "Delivering to Delhi 110008"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 23,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "add-icon-container",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "add-icon"
-                            }, void 0, false, {
-                                fileName: "src/common/navbar/navbar.js",
-                                lineNumber: 25,
-                                columnNumber: 21
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "add-second",
-                                children: "Update location"
-                            }, void 0, false, {
-                                fileName: "src/common/navbar/navbar.js",
-                                lineNumber: 26,
-                                columnNumber: 21
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 24,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/common/navbar/navbar.js",
-                lineNumber: 22,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-search",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
-                        className: "search-select",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                            children: "All"
-                        }, void 0, false, {
-                            fileName: "src/common/navbar/navbar.js",
-                            lineNumber: 33,
-                            columnNumber: 21
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 32,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "search-input",
-                        type: "text",
-                        placeholder: "Search Amazon.in",
-                        onChange: handleChange
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 35,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "search-icon"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 36,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/common/navbar/navbar.js",
-                lineNumber: 31,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-language border",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flag-icon"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 40,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "flag-name",
-                        children: "EN"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 41,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "arrow-icon"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 42,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/common/navbar/navbar.js",
-                lineNumber: 39,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-user border",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "user-info",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/signup",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    className: "user-line1",
-                                    children: "Hello, sign in"
-                                }, void 0, false, {
-                                    fileName: "src/common/navbar/navbar.js",
-                                    lineNumber: 49,
-                                    columnNumber: 21
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/common/navbar/navbar.js",
-                                lineNumber: 48,
-                                columnNumber: 21
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "user-line2",
-                                children: "Account & lists"
-                            }, void 0, false, {
-                                fileName: "src/common/navbar/navbar.js",
-                                lineNumber: 51,
-                                columnNumber: 21
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 47,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "arrow-icon-2"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 53,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/common/navbar/navbar.js",
-                lineNumber: 46,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-orders border",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "order-1",
-                        children: "Returns"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 58,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "order-2",
-                        children: "& Orders"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 59,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/common/navbar/navbar.js",
-                lineNumber: 57,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-cart border",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "cart-count",
-                        children: "0"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 64,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "cart-icon"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 65,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "cart-line",
-                        children: "Cart"
-                    }, void 0, false, {
-                        fileName: "src/common/navbar/navbar.js",
-                        lineNumber: 66,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/common/navbar/navbar.js",
-                lineNumber: 63,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/common/navbar/navbar.js",
-        lineNumber: 16,
-        columnNumber: 9
-    }, undefined);
-};
-_s(NavBar, "oZZl5Cneyny2k+spNddMgTCH3wU=");
-_c = NavBar;
-exports.default = NavBar;
-var _c;
-$RefreshReg$(_c, "NavBar");
-
-  $parcel$ReactRefreshHelpers$485e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../logo/logo.js":"9zLAp","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"9zLAp":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c88a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c88a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const AmazonLogo = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-    className: "logo"
-}, void 0, false, {
-    fileName: "src/common/logo/logo.js",
-    lineNumber: 2,
-    columnNumber: 20
-}, undefined);
-exports.default = AmazonLogo;
-
-  $parcel$ReactRefreshHelpers$c88a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
